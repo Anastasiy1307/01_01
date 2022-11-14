@@ -87,11 +87,11 @@
                              SelectionBrush="#FF186C6C" 
                              Width="350"/>
                 <Button
-                    Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="20" Grid.RowSpan="80"
-                Height="35" Width="130"
-                Content="Регистрация"
-                Background="#92D3D3"
-                BorderBrush="#186C6C" 
+                    Margin="0,420,0,0"
+                    Height="35" Width="130"
+                    Content="Регистрация"
+                    Background="#92D3D3"
+                    BorderBrush="#186C6C" 
                     Cursor="Hand" RenderTransformOrigin="0.508,12.413"
                     />
 
