@@ -1,0 +1,104 @@
+﻿<Window x:Class="_01_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:_01_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+
+    <Grid Background="#E0FFFF">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="70"
+                Background="#FFFFFF" 
+                VerticalAlignment="Center" 
+                Padding="30" MaxWidth="550" 
+                CornerRadius="20" Height="701" Margin="0,0,20,0">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+
+
+
+                <TextBlock Text="Добро пожаловать!" 
+                           FontSize="30" 
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+
+                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                    </TextBox.BorderBrush>
+
+                </TextBox>
+
+                <PasswordBox x:Name="TextBoxpass" 
+                             materialDesign:HintAssist.Hint="Введите пароль" 
+                             CaretBrush="#FF186C6C" 
+                             Margin="0,20,0,0"
+                             SelectionBrush="#FF186C6C" 
+                             Width="350"/>
+
+                <PasswordBox x:Name="TextBoxpass2" 
+                             materialDesign:HintAssist.Hint="Введите пароль" 
+                             CaretBrush="#FF186C6C" 
+                             Margin="0,20,0,0"
+                             SelectionBrush="#FF186C6C" 
+                             Width="350"/>
+                <Button
+                    Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="20" Grid.RowSpan="80"
+                Height="35" Width="130"
+                Content="Регистрация"
+                Background="#92D3D3"
+                BorderBrush="#186C6C" 
+                    Cursor="Hand" RenderTransformOrigin="0.508,12.413"
+                    />
+
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Window>
