@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:_01_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="Регистрация" Height="550" Width="800">
 
     <Grid Background="#E0FFFF">
 
@@ -48,11 +48,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="70"
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="30"
                 Background="#FFFFFF" 
                 VerticalAlignment="Center" 
                 Padding="30" MaxWidth="550" 
-                CornerRadius="20" Height="701" Margin="0,0,20,0">
+                CornerRadius="20" Height="405" Margin="0,0,20,0">
 
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
@@ -65,6 +65,10 @@
                            FontSize="30" 
                            FontWeight="Bold"
                            HorizontalAlignment="Center"/>
+                <TextBlock Text=" Вас приветствуют телекоммуникационные услуги" 
+                           FontSize="15" 
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
 
                 <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
                     <TextBox.BorderBrush>
@@ -73,6 +77,28 @@
 
                 </TextBox>
 
+                <TextBox x:Name="TextBoxName" materialDesign:HintAssist.Hint="Введите Имя"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         CaretBrush="#FF186C6C" 
+                         SelectionBrush="#FF186C6C" 
+                         Width="350" 
+                         Margin="0,15,0,0">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                    </TextBox.BorderBrush>
+
+                </TextBox>
+                <TextBox x:Name="TextBoxSurname" materialDesign:HintAssist.Hint="Введите Фамилию"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         CaretBrush="#FF186C6C" 
+                         SelectionBrush="#FF186C6C" 
+                         Width="350" 
+                         Margin="0,15,0,0">
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                    </TextBox.BorderBrush>
+
+                </TextBox>
                 <PasswordBox x:Name="TextBoxpass" 
                              materialDesign:HintAssist.Hint="Введите пароль" 
                              CaretBrush="#FF186C6C" 
@@ -86,14 +112,17 @@
                              Margin="0,20,0,0"
                              SelectionBrush="#FF186C6C" 
                              Width="350"/>
+
+
                 <Button
-                    Margin="0,420,0,0"
+                    Margin="0,20,0,0"
                     Height="35" Width="130"
                     Content="Регистрация"
                     Background="#92D3D3"
                     BorderBrush="#186C6C" 
                     Cursor="Hand" RenderTransformOrigin="0.508,12.413"
                     />
+
 
 
             </StackPanel>

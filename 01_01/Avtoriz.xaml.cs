@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace _01_01
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Avtoriz.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Avtoriz : Window
     {
-        public MainWindow()
+        public Avtoriz()
         {
             InitializeComponent();
-        }
-
-        private void TextBoxLog_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
