@@ -80,7 +80,7 @@
                         Background="#92D3D3"
                         BorderBrush="#186C6C" 
                         Cursor="Hand"
-                        Click="btnavtoriz"/>
+                       />
 
                 <Button x:Name="reg"
                         Height="35" Width="130"
@@ -88,7 +88,7 @@
                         Margin="210,-35,0,0"
                         Background="#92D3D3"
                         BorderBrush="#186C6C" 
-                        Click="btnReg"
+                       
                         Cursor="Hand"/>
 
 
