@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Регистрация" Height="550" Width="800">
 
-    <Grid Background="#E0FFFF">
+    <Grid Background="#000000">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -49,7 +49,7 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="30"
-                Background="#FFFFFF" 
+                Background="#8f939c" 
                 VerticalAlignment="Center" 
                 Padding="30" MaxWidth="550" 
                 CornerRadius="20" Height="405" Margin="0,0,20,0">
@@ -64,15 +64,15 @@
                 <TextBlock Text="Добро пожаловать!" 
                            FontSize="30" 
                            FontWeight="Bold"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center" Foreground="White"/>
                 <TextBlock Text=" Вас приветствуют телекоммуникационные услуги" 
                            FontSize="15" 
                            FontWeight="Bold"
-                           HorizontalAlignment="Center"/>
+                           HorizontalAlignment="Center" Foreground="White"/>
 
-                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" >
+                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" Foreground="White" >
                     <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                        <SolidColorBrush Color="White" Opacity="1"/>
                     </TextBox.BorderBrush>
 
                 </TextBox>
@@ -82,9 +82,9 @@
                          CaretBrush="#FF186C6C" 
                          SelectionBrush="#FF186C6C" 
                          Width="350" 
-                         Margin="0,15,0,0">
+                         Margin="0,15,0,0" Foreground="White">
                     <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                        <SolidColorBrush Color="White" Opacity="1"/>
                     </TextBox.BorderBrush>
 
                 </TextBox>
@@ -93,9 +93,9 @@
                          CaretBrush="#FF186C6C" 
                          SelectionBrush="#FF186C6C" 
                          Width="350" 
-                         Margin="0,15,0,0">
+                         Margin="0,15,0,0" Foreground="White">
                     <TextBox.BorderBrush>
-                        <SolidColorBrush Color="#FF186C6C" Opacity="1"/>
+                        <SolidColorBrush Color="White" Opacity="1"/>
                     </TextBox.BorderBrush>
 
                 </TextBox>
@@ -118,9 +118,9 @@
                     Margin="0,20,0,0"
                     Height="35" Width="130"
                     Content="Регистрация"
-                    Background="#92D3D3"
-                    BorderBrush="#186C6C" 
-                    Cursor="Hand" RenderTransformOrigin="0.508,12.413"
+                    Background="#dedede"
+                    BorderBrush="#8f939c" 
+                    Cursor="Hand" RenderTransformOrigin="0.508,12.413" Foreground="Black"
                     />
 
 
