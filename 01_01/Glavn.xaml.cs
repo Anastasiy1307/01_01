@@ -23,5 +23,10 @@ namespace _01_01
         {
             InitializeComponent();
         }
+
+        private void table_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -79,7 +79,7 @@
                         Content="Авторизация"
                         Background="#dedede"
                         BorderBrush="#8f939c" 
-                        Cursor="Hand" Foreground="Black"
+                        Cursor="Hand" Foreground="Black" Click="avt_Click"
                        />
 
                 <Button x:Name="reg"
@@ -89,7 +89,7 @@
                         Background="#dedede"
                         BorderBrush="#8f939c" 
                        
-                        Cursor="Hand" Foreground="Black"/>
+                        Cursor="Hand" Foreground="Black" Click="reg_Click"/>
 
 
             </StackPanel>

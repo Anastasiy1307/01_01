@@ -23,5 +23,19 @@ namespace _01_01
         {
             InitializeComponent();
         }
+
+        private void avt_Click(object sender, RoutedEventArgs e)
+        {
+            Glavn glavn = new Glavn();
+            glavn.Show();
+            Close();
+        }
+
+        private void reg_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow reg = new MainWindow();
+            reg.Show();
+            Close();
+        }
     }
 }

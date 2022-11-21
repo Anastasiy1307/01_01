@@ -70,7 +70,7 @@
                            FontWeight="Bold"
                            HorizontalAlignment="Center" Foreground="White"/>
 
-                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" Foreground="White" >
+                <TextBox x:Name="TextBoxLog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" Foreground="White" TextChanged="TextBoxLog_TextChanged_1" >
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="White" Opacity="1"/>
                     </TextBox.BorderBrush>
@@ -120,7 +120,7 @@
                     Content="Регистрация"
                     Background="#dedede"
                     BorderBrush="#8f939c" 
-                    Cursor="Hand" RenderTransformOrigin="0.508,12.413" Foreground="Black"
+                    Cursor="Hand" RenderTransformOrigin="0.508,12.413" Foreground="Black" Click="Registr_Click"
                     />
 
 

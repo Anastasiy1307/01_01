@@ -29,5 +29,19 @@ namespace _01_01
         {
 
         }
+
+        private void TextBoxLog_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Registr_Click(object sender, RoutedEventArgs e)
+        {
+            Avtoriz avtor = new Avtoriz();
+            avtor.Show();
+            Close();
+        }
+
+        
     }
 }
