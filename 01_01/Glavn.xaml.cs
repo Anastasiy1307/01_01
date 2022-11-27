@@ -34,7 +34,7 @@ namespace _01_01
 
         private void MenuItemMyusl_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Visibility= Visibility.Collapsed;
+            
             MainFrame.Navigate(new Myusl());
         }
 

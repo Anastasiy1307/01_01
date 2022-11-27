@@ -54,7 +54,7 @@
                 <TextBox x:Name="TextBoxLog" 
                          
                          materialDesign:HintAssist.Hint="Введите логин" 
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" Foreground="White" >
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  CaretBrush="#FF186C6C" SelectionBrush="#FF186C6C" Width="350" Foreground="White" TextChanged="TextBoxLog_TextChanged" >
                     <TextBox.BorderBrush>
                         <SolidColorBrush Color="White" Opacity="1"/>
                     </TextBox.BorderBrush>

@@ -23,12 +23,30 @@ namespace _01_01
         {
             InitializeComponent();
         }
-
+        List<_01_01.Client> users = new List<_01_01.Client>();
         private void avt_Click(object sender, RoutedEventArgs e)
         {
-            Glavn glavn = new Glavn();
-            glavn.Show();
-            Close();
+            string klients = TextBoxLog.Text;
+            string pas = TextBoxpass.Password;
+            int count = TEL_USL_01_01Entities.GetContext().Client.Count();
+            users = TEL_USL_01_01Entities.GetContext().Client.ToList();
+            for (int i = 0; i < count; i++)
+            {
+                if (users[i].Login == klients)
+                {
+                    if (users[i].Password == pas)
+                    {
+                        Glavn glavn1 = new Glavn();
+                        glavn1.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль");
+                    }
+                }
+            }          
+           
         }
 
         private void reg_Click(object sender, RoutedEventArgs e)
@@ -36,6 +54,11 @@ namespace _01_01
             MainWindow reg = new MainWindow();
             reg.Show();
             Close();
+        }
+
+        private void TextBoxLog_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
