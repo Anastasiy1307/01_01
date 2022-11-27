@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_01_01"
          mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Личный кабинет" Height="600" Width="800">
+        Title="Личный кабинет" Height="600" Width="800" Background="Black">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -105,13 +105,19 @@
         </Grid.RowDefinitions>
 
         <Menu Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="14"
-              Background="#000000"/>
+              Background="#000000">
+            <MenuItem Header="Мои&#xA; услуги" FontSize="15" Background="#8f939c"  Width="130" Click="MenuItem_Click" Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
+            <MenuItem Header="Тарифы" FontSize="15" Background="#8f939c"  Width="150" Click="MenuItem_Click" Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
+            <MenuItem Header="Интернет" FontSize="15" Background="#8f939c"  Width="170" Click="MenuItem_Click" Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
+            <MenuItem Header="Мобильная&#xA;связь" FontSize="15" Background="#8f939c"  Width="200" Click="MenuItem_Click" Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
+            <Button Height="80" Width="60" Background="Black" BorderBrush="Black" Foreground="Black">           
+                    <Image Source="Resources/user.png" />                  
+            </Button>
 
-        <DataGrid Grid.Column="2" Grid.ColumnSpan="11" Grid.Row="4" Grid.RowSpan="10"
-                  d:ItemsSource="{d:SampleData ItemCount=3}"
-                  AutoGenerateColumns="True" 
-                  Name="table_1"
-                  ItemsSource="{Binding}" Margin="0,0,0,15" />
+        </Menu>
+
+        <Frame Grid.Row="3" Grid.ColumnSpan="14" Grid.RowSpan="16"
+               Name="MainFrame" Background="#8f939c"/>
 
     </Grid>
 </Window>

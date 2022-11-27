@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace _01_01
 {
     /// <summary>
-    /// Логика взаимодействия для Glavn.xaml
+    /// Логика взаимодействия для Myusl.xaml
     /// </summary>
-    public partial class Glavn : Window
+    public partial class Myusl : Page
     {
-        public Glavn()
+        public Myusl()
         {
             InitializeComponent();
-        }
-
-        private void table_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
