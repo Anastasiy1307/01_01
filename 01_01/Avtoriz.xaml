@@ -74,22 +74,13 @@
 
 
                 <Button x:Name="avt"
-                        Margin="-210,45,0,0"
+                        Margin="0,45,0,0"
                         Height="35" Width="130"
                         Content="Авторизация"
                         Background="#dedede"
                         BorderBrush="#8f939c" 
                         Cursor="Hand" Foreground="Black" Click="avt_Click"
                        />
-
-                <Button x:Name="reg"
-                        Height="35" Width="130"
-                        Content="Регистрация"
-                        Margin="210,-35,0,0"
-                        Background="#dedede"
-                        BorderBrush="#8f939c" 
-                       
-                        Cursor="Hand" Foreground="Black" Click="reg_Click"/>
 
 
             </StackPanel>
