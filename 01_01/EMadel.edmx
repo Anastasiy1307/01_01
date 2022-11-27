@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище TEL_USL_01_01Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Familia" Type="nvarchar" MaxLength="30" />
+          <Property Name="ID_schet" Type="int" Nullable="false" />
+          <Property Name="Login" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Reg">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Schet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_client" Type="int" />
+          <Property Name="summa" Type="float" />
+          <Property Name="id_uslugi" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="USl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usluga" Type="nchar" MaxLength="10" />
+          <Property Name="Stoimost" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_Client_Schet">
+          <End Role="Schet" Type="Self.Schet" Multiplicity="1" />
+          <End Role="Client" Type="Self.Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="ID_schet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schet_USl">
+          <End Role="USl" Type="Self.USl" Multiplicity="0..1" />
+          <End Role="Schet" Type="Self.Schet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Schet">
+              <PropertyRef Name="id_uslugi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище TEL_USL_01_01ModelContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reg" EntityType="Self.Reg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schet" EntityType="Self.Schet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USl" EntityType="Self.USl" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Client_Schet" Association="Self.FK_Client_Schet">
+            <End Role="Schet" EntitySet="Schet" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schet_USl" Association="Self.FK_Schet_USl">
+            <End Role="USl" EntitySet="USl" />
+            <End Role="Schet" EntitySet="Schet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TEL_USL_01_01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Familia" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ID_schet" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Schet1" Relationship="TEL_USL_01_01Model.FK_Client_Schet" FromRole="Client" ToRole="Schet" />
+        </EntityType>
+        <EntityType Name="Reg">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Schet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_client" Type="Int32" />
+          <Property Name="summa" Type="Double" />
+          <Property Name="id_uslugi" Type="Int32" />
+          <NavigationProperty Name="Client1" Relationship="TEL_USL_01_01Model.FK_Client_Schet" FromRole="Schet" ToRole="Client" />
+          <NavigationProperty Name="USl" Relationship="TEL_USL_01_01Model.FK_Schet_USl" FromRole="Schet" ToRole="USl" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usluga" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Stoimost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Schet" Relationship="TEL_USL_01_01Model.FK_Schet_USl" FromRole="USl" ToRole="Schet" />
+        </EntityType>
+        <EntityContainer Name="TEL_USL_01_01Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Reg" EntityType="Self.Reg" />
+          <EntitySet Name="Schet" EntityType="Self.Schet" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="USl" EntityType="Self.USl" />
+          <AssociationSet Name="FK_Client_Schet" Association="TEL_USL_01_01Model.FK_Client_Schet">
+            <End Role="Schet" EntitySet="Schet" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Schet_USl" Association="TEL_USL_01_01Model.FK_Schet_USl">
+            <End Role="USl" EntitySet="USl" />
+            <End Role="Schet" EntitySet="Schet" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_Client_Schet">
+          <End Type="TEL_USL_01_01Model.Schet" Role="Schet" Multiplicity="1" />
+          <End Type="TEL_USL_01_01Model.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="ID_schet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Schet_USl">
+          <End Type="TEL_USL_01_01Model.USl" Role="USl" Multiplicity="0..1" />
+          <End Type="TEL_USL_01_01Model.Schet" Role="Schet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Schet">
+              <PropertyRef Name="id_uslugi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TEL_USL_01_01ModelContainer" CdmEntityContainer="TEL_USL_01_01Entities">
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="TEL_USL_01_01Model.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Familia" ColumnName="Familia" />
+                <ScalarProperty Name="ID_schet" ColumnName="ID_schet" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reg">
+            <EntityTypeMapping TypeName="TEL_USL_01_01Model.Reg">
+              <MappingFragment StoreEntitySet="Reg">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schet">
+            <EntityTypeMapping TypeName="TEL_USL_01_01Model.Schet">
+              <MappingFragment StoreEntitySet="Schet">
+                <ScalarProperty Name="id_uslugi" ColumnName="id_uslugi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
+                <ScalarProperty Name="summa" ColumnName="summa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="TEL_USL_01_01Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USl">
+            <EntityTypeMapping TypeName="TEL_USL_01_01Model.USl">
+              <MappingFragment StoreEntitySet="USl">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Usluga" ColumnName="Usluga" />
+                <ScalarProperty Name="Stoimost" ColumnName="Stoimost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

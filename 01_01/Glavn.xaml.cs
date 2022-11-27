@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +20,11 @@ namespace _01_01
     /// </summary>
     public partial class Glavn : Window
     {
+        
         public Glavn()
         {
             InitializeComponent();
+        
         }
 
         private void table_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -29,7 +32,13 @@ namespace _01_01
 
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItemMyusl_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Visibility= Visibility.Collapsed;
+            MainFrame.Navigate(new Myusl());
+        }
+
+        private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
 
         }

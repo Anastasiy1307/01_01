@@ -23,6 +23,8 @@ namespace _01_01
         public Myusl()
         {
             InitializeComponent();
+            Uslugi.ItemsSource = TEL_USL_01_01Entities.GetContext().Schet.ToList();
+            Myusl customer = (Myusl)Uslugi.SelectedItem;
         }
     }
 }

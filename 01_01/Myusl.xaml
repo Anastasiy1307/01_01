@@ -9,6 +9,21 @@
       Title="Myusl">
 
     <Grid Background="#8f939c">
-        <DataGrid x:Name="Uslugi" ></DataGrid>
+        <DataGrid x:Name="Uslugi"  AutoGenerateColumns="False" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="48,40,48,40">
+            <DataGrid.Columns>
+            <DataGridTextColumn Header="Фамилия" Binding="{Binding Client.Familia}" >
+            </DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Client.Name}" >
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Услуга" Binding="{Binding USl.Usluga}" ></DataGridTextColumn>
+            <DataGridTextColumn Header="Сумма" Binding="{Binding summa}" ></DataGridTextColumn>
+            <DataGridTemplateColumn Width="auto">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
