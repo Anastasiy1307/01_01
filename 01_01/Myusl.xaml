@@ -9,6 +9,6 @@
       Title="Myusl">
 
     <Grid Background="#8f939c">
-        
+        <DataGrid x:Name="Uslugi" ></DataGrid>
     </Grid>
 </Page>
