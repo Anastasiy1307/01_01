@@ -36,7 +36,7 @@ namespace _01_01
                 {
                     if (users[i].Password == pas)
                     {
-                        Glavn glavn1 = new Glavn();
+                        Glavn glavn1 = new Glavn(klients);
                         glavn1.Show();
                         Close();
                     }

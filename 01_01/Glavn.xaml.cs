@@ -20,11 +20,11 @@ namespace _01_01
     /// </summary>
     public partial class Glavn : Window
     {
-        
-        public Glavn()
+        public string k;
+        public Glavn(string klient)
         {
             InitializeComponent();
-        
+            k= klient;
         }
 
         private void table_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,8 +34,10 @@ namespace _01_01
 
         private void MenuItemMyusl_Click(object sender, RoutedEventArgs e)
         {
-            
-            MainFrame.Navigate(new Myusl());
+
+            Myusl myusl = new Myusl(k);
+            myusl.Lib(k);
+            MainFrame.Navigate(myusl);
         }
 
         private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)

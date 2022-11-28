@@ -20,13 +20,11 @@ namespace _01_01
             : base("name=TEL_USL_01_01Entities")
         {
         }
-
         public static TEL_USL_01_01Entities GetContext()
         {
             if (_instance == null) _instance = new TEL_USL_01_01Entities();
             return _instance;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
