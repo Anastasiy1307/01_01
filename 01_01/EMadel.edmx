@@ -48,8 +48,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Usluga" Type="nchar" MaxLength="10" />
-          <Property Name="Stoimost" Type="nchar" MaxLength="10" />
+          <Property Name="Usluga" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stoimost" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Client_Schet">
           <End Role="Schet" Type="Self.Schet" Multiplicity="1" />
@@ -140,8 +140,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Usluga" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Stoimost" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Usluga" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stoimost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Schet" Relationship="TEL_USL_01_01Model.FK_Schet_USl" FromRole="USl" ToRole="Schet" />
         </EntityType>
         <EntityContainer Name="TEL_USL_01_01Entities" annotation:LazyLoadingEnabled="true">

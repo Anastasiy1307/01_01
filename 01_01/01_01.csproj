@@ -90,6 +90,9 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>EMadel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tarif.xaml.cs">
+      <DependentUpon>Tarif.xaml</DependentUpon>
+    </Compile>
     <Compile Include="USl.cs">
       <DependentUpon>EMadel.tt</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <DependentUpon>Glavn.xaml</DependentUpon>
     </Compile>
     <Page Include="Myusl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tarif.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

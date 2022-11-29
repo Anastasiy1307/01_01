@@ -26,9 +26,6 @@ namespace _01_01
         public Myusl(string k)
         {
             InitializeComponent();
-
-
-
             klient = k;
           
         }

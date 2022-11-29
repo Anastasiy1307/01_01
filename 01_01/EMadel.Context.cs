@@ -20,16 +20,17 @@ namespace _01_01
             : base("name=TEL_USL_01_01Entities")
         {
         }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+
         public static TEL_USL_01_01Entities GetContext()
         {
             if (_instance == null) _instance = new TEL_USL_01_01Entities();
             return _instance;
         }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Reg> Reg { get; set; }
         public virtual DbSet<Schet> Schet { get; set; }

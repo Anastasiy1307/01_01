@@ -44,5 +44,11 @@ namespace _01_01
         {
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Tarif tarif = new Tarif();
+            MainFrame.Navigate(tarif);
+        }
     }
 }

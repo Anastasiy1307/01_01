@@ -107,7 +107,7 @@
         <Menu Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="14"
               Background="#000000">
             <MenuItem Header="Мои&#xA; услуги" FontSize="15" Background="#8f939c"  Width="130" Click="MenuItemMyusl_Click" Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
-            <MenuItem Header="Тарифы" FontSize="15" Background="#8f939c"  Width="150"  Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
+            <MenuItem Header="Тарифы" FontSize="15" Background="#8f939c"  Width="150"  Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0" Click="MenuItem_Click"/>
             <MenuItem Header="Интернет" FontSize="15" Background="#8f939c"  Width="170"  Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
             <MenuItem Header="Мобильная&#xA;связь" FontSize="15" Background="#8f939c"  Width="200"  Height="52" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,0"/>
             <Button Height="80" Width="60" Background="Black" BorderBrush="Black" Foreground="Black">           
