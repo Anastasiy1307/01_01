@@ -50,5 +50,22 @@ namespace _01_01
             Tarif tarif = new Tarif();
             MainFrame.Navigate(tarif);
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Internet internet = new Internet();
+            MainFrame.Navigate(internet);
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            Mob mob = new Mob();
+            MainFrame.Navigate(mob);
+        }
+
+        private void kab(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

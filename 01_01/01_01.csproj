@@ -80,7 +80,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EMadel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Internet.xaml.cs">
+      <DependentUpon>Internet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
+    <Compile Include="Mob.xaml.cs">
+      <DependentUpon>Mob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reg.cs">
       <DependentUpon>EMadel.tt</DependentUpon>
     </Compile>
@@ -124,7 +133,19 @@
     <Compile Include="Glavn.xaml.cs">
       <DependentUpon>Glavn.xaml</DependentUpon>
     </Compile>
+    <Page Include="Internet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Myusl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
