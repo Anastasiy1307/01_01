@@ -65,7 +65,8 @@ namespace _01_01
 
         private void kab(object sender, RoutedEventArgs e)
         {
-
+            Pol pol = new Pol();
+            MainFrame.Navigate(pol);
         }
     }
 }

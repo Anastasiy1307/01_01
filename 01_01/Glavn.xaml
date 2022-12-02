@@ -117,7 +117,8 @@
         </Menu>
 
         <Frame Grid.Row="3" Grid.ColumnSpan="14" Grid.RowSpan="16"
-               Name="MainFrame" Background="#8f939c" Navigated="MainFrame_Navigated"/>
+               Name="MainFrame" Background="#8f939c" Navigated="MainFrame_Navigated" 
+               NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

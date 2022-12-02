@@ -45,10 +45,6 @@ namespace _01_01
                         MessageBox.Show("Неверный пароль");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Неверный логин");
-                }
             }          
            
         }
